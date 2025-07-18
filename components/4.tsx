@@ -2,52 +2,41 @@ import React from 'react';
 
 export default function WireframeComponent() {
   return (
-    <div className='flex flex-col min-h-screen'>
-      <header className='border-b p-4 flex justify-between items-center'>
-        <div className='flex items-center'>
-          <div className='font-bold text-lg'>Logo</div>
-        </div>
-        <nav className='flex space-x-4'>
-          <a href='#' className='text-gray-600 hover:text-gray-800'>Navigation</a>
-        </nav>
-        <div className='relative'>
-          <button className='hover:text-gray-800'>Cart</button>
-        </div>
+    <div className="flex flex-col min-h-screen">
+      <header className="flex justify-between items-center p-4 bg-gray-800 text-white">
+        {true && <div className="logo">Logo</div>}
+        {true && <nav className="navigation">Navigation</nav>}
+        {true && <div className="cart">Cart</div>}
       </header>
-      <main className='flex-1 p-4'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-          <div className='border p-4 rounded'>
-            <img src='placeholder.jpg' alt='Product' className='w-full h-48 object-cover'/>
-            <h2 className='mt-2 font-bold'>Product Title</h2>
-            <p className='mt-1 text-sm text-gray-700'>Description</p>
-            <button className='mt-2 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600'>Add to Cart</button>
-          </div>
+      <main className="flex-grow p-4">
+        <div className="product-list grid grid-cols-1 md:grid-cols-3 gap-4">
+          {true && (
+            <div className="product-card border rounded-lg p-4 shadow-sm">
+              {true && <div className="image bg-gray-200 h-40 mb-2"></div>}
+              {true && <h2 className="title font-bold text-lg mb-2">Product Title</h2>}
+              {true && <p className="description text-gray-700 mb-4">Product Description</p>}
+              {true && <button className="add-cart-button bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>}
+            </div>
+          )}
         </div>
       </main>
-      <footer className='border-t p-4 flex justify-between'>
-        <div>Contact Info</div>
-        <div className='flex space-x-2'>
-          <a href='#' className='text-gray-600 hover:text-gray-800'>Social Links</a>
-        </div>
+      <footer className="p-4 bg-gray-800 text-white">
+        {true && <div className="contact-info">Contact Info</div>}
+        {true && <div className="social-links">Social Links</div>}
       </footer>
-      <div className='fixed top-0 right-0 w-64 h-full bg-white shadow-lg'>
-        <div className='p-4 overflow-y-auto h-full'>
-          <div className='flex justify-between items-center mb-4'>
-            <h2 className='font-bold text-lg'>Shopping Cart</h2>
-          </div>
-          <div className='border p-2 rounded mb-4 flex justify-between items-center'>
-            <img src='placeholder.jpg' alt='Cart Product' className='w-16 h-16 object-cover'/>
-            <div className='flex flex-col'>
-              <h3 className='font-bold'>Product Title</h3>
-              <div className='flex items-center'>
-                <input type='number' defaultValue='1' className='w-12 p-1 border rounded text-center' />
-                <button className='ml-2 text-red-500 hover:text-red-700'>Remove</button>
-              </div>
+      <aside className="cart-sidebar p-4 bg-white shadow-lg w-80">
+        <div className="cart-product-list">
+          {true && (
+            <div className="cart-product-card flex items-center border-b pb-2 mb-2">
+              {true && <div className="image bg-gray-200 h-10 w-10 mr-4"></div>}
+              {true && <h2 className="title font-bold text-lg flex-grow">Product Title</h2>}
+              {true && <input type="number" className="quantity-selector border w-12 text-center mx-2" defaultValue={1} />}
+              {true && <button className="remove-button text-red-500">Remove</button>}
             </div>
-          </div>
-          <button className='bg-green-500 text-white py-2 px-4 rounded w-full hover:bg-green-600'>Checkout</button>
+          )}
         </div>
-      </div>
+        {true && <button className="checkout-button bg-green-500 text-white px-4 py-2 rounded w-full mt-4">Checkout</button>}
+      </aside>
     </div>
   );
 }
