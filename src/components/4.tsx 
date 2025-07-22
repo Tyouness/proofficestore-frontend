@@ -1,0 +1,40 @@
+import React from 'react';
+
+export default function WireframeComponent() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className="flex items-center justify-between p-4 shadow-md">
+        <div className="logo">Logo</div>
+        <nav className="navigation">Navigation</nav>
+        <div className="cart">Cart</div>
+      </header>
+      <main className="flex-grow">
+        <section className="product-list grid grid-cols-4 gap-4 p-4">
+          <div className="product-card border rounded p-4">
+            <div className="image bg-gray-200 h-48 mb-2">Image</div>
+            <div className="title font-bold">Product Title</div>
+            <div className="description text-sm">Product Description</div>
+            <button className="add-cart-button mt-2 p-2 bg-blue-500 text-white rounded">Add to Cart</button>
+          </div>
+        </section>
+      </main>
+      <footer className="flex items-center justify-between p-4 bg-gray-800 text-white">
+        <div className="contact-info">Contact Info</div>
+        <div className="social-links">Social Links</div>
+      </footer>
+      <div className="cart-overlay fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <div className="cart bg-white p-4 rounded">
+          <section className="cart-product-list grid gap-4">
+            <div className="cart-product-card border rounded p-4 flex items-center">
+              <div className="image bg-gray-200 h-24 w-24">Image</div>
+              <div className="title flex-grow ml-4">Product Title</div>
+              <div className="quantity-selector ml-4">Qty</div>
+              <button className="remove-button ml-4 p-2 bg-red-500 text-white rounded">Remove</button>
+            </div>
+          </section>
+          <button className="checkout-button mt-4 p-2 bg-green-500 text-white rounded">Checkout</button>
+        </div>
+      </div>
+    </div>
+  );
+}
