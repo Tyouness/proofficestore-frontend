@@ -1,0 +1,35 @@
+import React from 'react';
+
+export default function WireframeComponent() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className="flex justify-between items-center p-4 bg-gray-800 text-white">
+        <div className="logo">Logo</div>
+        <nav className="navigation">Navigation</nav>
+      </header>
+      <main className="flex-grow p-4">
+        <section className="product-comparison grid grid-cols-2 gap-4 mb-4">
+          <div className="product p-4 border rounded shadow">
+            <h2 className="text-xl font-bold">ESET</h2>
+            <p>Details are here.</p>
+            <p>Rating: ★★★★☆</p>
+            <p>Price: $49.99</p>
+          </div>
+          <div className="product p-4 border rounded shadow">
+            <h2 className="text-xl font-bold">Norton</h2>
+            <p>Details are here.</p>
+            <p>Rating: ★★★★☆</p>
+            <p>Price: $59.99</p>
+          </div>
+        </section>
+        <section className="user-decision p-4 border rounded shadow mb-4">
+          <p>Best product for your needs: …</p>
+        </section>
+      </main>
+      <footer className="p-4 bg-gray-800 text-white">
+        <div className="contact-info">Contact Info</div>
+        <div className="social-media-links">Social Media Links</div>
+      </footer>
+    </div>
+  );
+}
