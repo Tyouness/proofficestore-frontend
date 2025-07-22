@@ -1,4 +1,3 @@
-import React from 'react';
 import TestPreview from './components/TestPreview';
 import './App.css';
 
