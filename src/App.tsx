@@ -1,0 +1,8 @@
+
+import Component from "./components/1";
+
+function App() {
+  return <Component />;
+}
+
+export default App;
