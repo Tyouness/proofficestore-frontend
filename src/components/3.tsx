@@ -1,0 +1,34 @@
+
+export default function WireframeComponent() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <header className="bg-gray-800 text-white p-4 flex justify-between">
+        <div className="logo">Logo</div>
+        <nav className="navigation">Navigation</nav>
+      </header>
+      <main className="flex-grow p-4">
+        <section className="product-comparison grid grid-cols-2 gap-4">
+          <div className="product border p-4">
+            <h2 className="productName">ESET</h2>
+            <p className="details">Details</p>
+            <span className="rating">Rating</span>
+            <span className="price">Price</span>
+          </div>
+          <div className="product border p-4">
+            <h2 className="productName">Norton</h2>
+            <p className="details">Details</p>
+            <span className="rating">Rating</span>
+            <span className="price">Price</span>
+          </div>
+        </section>
+        <section className="user-decision mt-4">
+          <p className="best-for-needs">Best for your needs</p>
+        </section>
+      </main>
+      <footer className="bg-gray-800 text-white p-4 flex justify-between">
+        <div className="contact-info">Contact Info</div>
+        <div className="social-media-links">Social Media Links</div>
+      </footer>
+    </div>
+  );
+}
