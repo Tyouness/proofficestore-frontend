@@ -1,4 +1,4 @@
-import TestPreview from './components/TestPreview';
+import TestPreview from './components/2';
 import './App.css';
 
 export default function App() {
