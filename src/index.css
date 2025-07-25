@@ -60,12 +60,19 @@ main {
   flex-grow: 1;
   padding: 2rem;
   background-color: var(--bg-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
 }
 
 .product-comparison {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -102,13 +109,12 @@ main {
 /* User Decision Section */
 .user-decision {
   margin-top: 3rem;
-  text-align: center;
   font-size: 1.2em;
   color: var(--secondary-color);
+  font-weight: bold;
 }
 
 .user-decision .best-for-needs {
-  font-weight: bold;
   color: var(--primary-color);
 }
 
@@ -118,10 +124,7 @@ footer {
   color: var(--footer-text-color);
   text-align: center;
   padding: 1rem;
-  font-size: 0.9em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 1rem;
 }
 
 footer .contact-info,
@@ -138,24 +141,6 @@ footer .social-media-links a {
 footer .contact-info a:hover,
 footer .social-media-links a:hover {
   text-decoration: underline;
-}
-
-/* Button Styles */
-button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 2rem;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 /* Media Queries */
