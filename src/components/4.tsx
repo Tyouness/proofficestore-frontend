@@ -1,0 +1,40 @@
+
+export default function WireframeComponent() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <header className="flex justify-between items-center p-4 border-b">
+        <div className="logo">Logo</div>
+        <nav className="navigation">Navigation</nav>
+        <div className="cart">Cart</div>
+      </header>
+      <main className="flex-1 p-4">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="product-card border p-4 rounded shadow">
+            <div className="image bg-gray-200 h-32 mb-2">Image</div>
+            <h2 className="title text-lg font-semibold mb-1">Product Title</h2>
+            <p className="description text-sm mb-2">Product Description</p>
+            <button className="add-cart-button bg-blue-500 text-white py-1 px-2 rounded">Add to Cart</button>
+          </div>
+        </div>
+      </main>
+      <footer className="p-4 border-t">
+        <div className="contact-info mb-2">Contact Info</div>
+        <div className="social-links">Social Links</div>
+      </footer>
+      <div className="cart bg-white p-4 shadow-lg fixed right-0 top-0 h-full w-1/3">
+        <h2 className="text-xl font-semibold mb-4">Cart</h2>
+        <div className="grid gap-4">
+          <div className="product-card border p-4 rounded shadow flex items-center">
+            <div className="image bg-gray-200 h-16 w-16 mr-2">Image</div>
+            <div className="flex-1">
+              <h3 className="title text-lg font-semibold">Product Title</h3>
+            </div>
+            <div className="quantity-selector mr-2">Qty Selector</div>
+            <button className="remove-button text-red-500">Remove</button>
+          </div>
+        </div>
+        <button className="checkout-button bg-green-500 text-white py-2 px-4 rounded mt-4">Checkout</button>
+      </div>
+    </div>
+  );
+}
